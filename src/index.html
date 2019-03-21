@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第八单元技能作品</title>
+    <style>
+        * {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        
+        li {
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul class="list">
+            <!-- <li>
+                <p>满300-30</p>
+                <img src="" alt="">
+                <span>599</span>
+            </li>
+            <li>
+                <p>满300-30</p>
+                <img src="" alt="">
+                <span>599</span>
+            </li>
+            <li>
+                <p>满300-30</p>
+                <img src="" alt="">
+                <span>599</span>
+            </li>
+            <li>
+                <p>满300-30</p>
+                <img src="" alt="">
+                <span>599</span>
+            </li>
+            <li>
+                <p>满300-30</p>
+                <img src="" alt="">
+                <span>599</span>
+            </li> -->
+        </ul>
+    </div>
+</body>
+<script src="js/axios.js"></script>
+<script>
+    const list = document.querySelector(".list");
+    axios.get("render", {
+
+    }).then(data => {
+        data.data.forEach(function(item) {
+            list.innerHTML += ` <li>
+                <p>${item.title}</p>
+                <img src="" alt="">
+                <span>${item.price}</span>
+            </li>`
+        })
+    })
+</script>
+
+</html>
